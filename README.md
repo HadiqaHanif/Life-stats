@@ -32,7 +32,6 @@
 ## 🧭 Table of Contents
 
 - [Features](#-features)
-- [Live Screenshots](#️-live-screenshots)
 - [Getting Started](#-getting-started)
 - [Code Structure](#-code-structure)
 - [License](#-license)
@@ -49,35 +48,7 @@
 | 4️⃣ | **Pulse-Guard** | Categorizes blood pressure (Normal → Elevated → Stage 1 → Stage 2 → Hypertensive Crisis) |
 | 5️⃣ | **Birthday Countdown** | Counts down the days until your next birthday 🎉 |
 
-Every module runs inside a **safe input loop** — mistype something and Health Mate just asks again, no crashes (mostly 👀 — see [Known Issues](#-known-issues--found-while-testing)).
-
-<br>
-
-## 🖥️ Live Screenshots
-
-> These aren't mockups — every screenshot below is a real, captured run of `health_mate.py`.
-
-<div align="center">
-
-#### 🏠 Main Dashboard
-<img src="assets/01_menu.png" width="620"/>
-
-#### 1️⃣ Fit-Check — BMI Calculator
-<img src="assets/02_fit_check.png" width="620"/>
-
-#### 2️⃣ Check-Age
-<img src="assets/03_age_wise.png" width="620"/>
-
-#### 3️⃣ Ideal-Weight Estimator
-<img src="assets/04_ideal_weight.png" width="620"/>
-
-#### 4️⃣ Pulse-Guard — Blood Pressure Check
-<img src="assets/05_pulse_guard.png" width="620"/>
-
-#### 5️⃣ Birthday Countdown 🎂
-<img src="assets/06_birthday_ok.png" width="620"/>
-
-</div>
+Every module runs inside a **safe input loop** — mistype something and Health Mate just asks again, no crashes (mostly 👀 — see [Known Issues].
 
 <br>
 
