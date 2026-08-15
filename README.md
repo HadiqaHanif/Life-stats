@@ -33,11 +33,8 @@
 
 - [Features](#-features)
 - [Live Screenshots](#️-live-screenshots)
-- [How It Works](#-how-it-works)
 - [Getting Started](#-getting-started)
 - [Code Structure](#-code-structure)
-- [Known Issues](#-known-issues--found-while-testing)
-- [Suggested Improvements](#-suggested-improvements)
 - [License](#-license)
 
 <br>
@@ -152,46 +149,6 @@ while True:
 
 <br>
 
-## 🐞 Known Issues *(found while testing)*
-
-While generating the screenshots above, one real bug surfaced — documenting it here in the spirit of full accuracy:
-
-<img src="assets/07_birthday_bug.png" width="620"/>
-
-**`birthday_countdown()` crashes if your birthday hasn't happened yet this year.**
-
-```python
-if self.next_birthday < today:
-    self.next_birthday = date(today.year + 1, self.birth_month, self.birth_day)
-    self.days_left = (self.next_birthday - today).days   # only set inside this branch!
-if self.days_left == 0:                                  # 💥 AttributeError if branch above was skipped
-```
-
-`self.days_left` is only assigned when the birthday **has already passed** this year. If it's still upcoming, `self.next_birthday >= today`, the `if` block is skipped, and the very next line throws `AttributeError: 'HealthToolKit' object has no attribute 'days_left'`.
-
-**A minimal fix:**
-
-```python
-today = date.today()
-if self.next_birthday < today:
-    self.next_birthday = date(today.year + 1, self.birth_month, self.birth_day)
-self.days_left = (self.next_birthday - today).days
-```
-
-*(Move `self.days_left = ...` outside the `if`, so it's always computed.)*
-
-<br>
-
-## 🛠️ Suggested Improvements
-
-- Fix the `birthday_countdown` bug above.
-- `except:` (bare) → `except ValueError:` in `fit_check` and `age_wise`, so unrelated bugs aren't silently swallowed.
-- `round(calculated_BMI)` hides the decimal — consider `round(calculated_BMI, 1)` for more precision.
-- `weight_ideal` catches `ValueError`, but an invalid gender re-loops via `continue` rather than an exception — worth a comment for clarity.
-- Add unit tests (`pytest`) around the pure calculation logic by separating it from the `input()`-driven I/O.
-- Move BP thresholds / BMI thresholds into named constants for readability.
-
-<br>
 
 ## 📜 License
 
@@ -201,7 +158,7 @@ Released under the **MIT License** — free to use, modify, and share.
 
 <div align="center">
 
-**Made with 🐍 Python and a lot of `while True:` loops.**
+**Made in 🐍 Python with love <3 **
 
 *If Health Mate helped you, consider giving the repo a ⭐*
 
