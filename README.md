@@ -129,7 +129,7 @@ Released under the **MIT License** — free to use, modify, and share.
 
 <div align="center">
 
-**Made in 🐍 Python with love <3 **
+**Made in 🐍 Python with love <3**
 
 *If Health Mate helped you, consider giving the repo a ⭐*
 
