@@ -71,8 +71,6 @@ flowchart TD
     K -->|E| J
 ```
 
-> 💡 Tip: GitHub renders the diagram above natively. If your viewer doesn't support Mermaid, it just falls back to a readable code block — no harm done.
-
 <br>
 
 ## 🏁 Getting Started
